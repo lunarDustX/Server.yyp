@@ -495,6 +495,25 @@
             }
         },
         {
+            "Key": "b80a9c4f-9a98-4eec-b221-be71c0ef93ce",
+            "Value": {
+                "id": "f9947fe3-78b8-4a82-ba11-4b749f743f85",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/server_send_soul\/server_send_soul.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cacb5b5d-8f15-4355-a7b8-f8579c2d392d",
             "Value": {
                 "id": "5988fdd9-3483-417b-b83d-37f44705e0c4",
@@ -571,6 +590,25 @@
             }
         },
         {
+            "Key": "ef80f57c-ad2b-466c-9a09-5640528b0f14",
+            "Value": {
+                "id": "ecbd1d09-ba80-496f-82d0-e9c61af401ad",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/o_soulGenerator\/o_soulGenerator.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "4b0c0016-2b94-47a7-81e3-d427ac0edfe6",
@@ -632,7 +670,8 @@
         "05c5f517-e76d-456c-9190-2e95ecc17740",
         "717c9db4-bd08-46e8-9084-c5a790025c71",
         "79c0d0ec-cf71-46df-a620-63172bde248a",
-        "48ebf781-b141-403c-ab99-45250d4b4b33"
+        "48ebf781-b141-403c-ab99-45250d4b4b33",
+        "b80a9c4f-9a98-4eec-b221-be71c0ef93ce"
     ],
     "tutorial": ""
 }

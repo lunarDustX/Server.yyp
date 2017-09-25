@@ -1,9 +1,17 @@
+#macro T_RED 0
+#macro T_YELLOW 1
+#macro T_BLUE 2
+
+
 #macro MESSAGE_GETID 0
 #macro MESSAGE_MOVE 1
 #macro MESSAGE_LEAVE 2
 #macro MESSAGE_JOIN 3
 #macro MESSAGE_SHOOT 4
 #macro MESSAGE_HIT 5
+#macro MESSAGE_READY 6
+#macro MESSAGE_SPAWN 7
+
 
 #macro SHOOT_RANGE 200
 

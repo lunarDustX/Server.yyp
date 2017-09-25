@@ -12,11 +12,13 @@ switch (message_id) {
 		xx = buffer_read(buffer, buffer_u16),
 		yy = buffer_read(buffer, buffer_u16),
 		username = buffer_read(buffer, buffer_string),
+		team = buffer_read(buffer, buffer_u8),
 		
 		playerNew = playerMap[? string(socket)];
 		playerNew.name = username;
 		playerNew.x = xx;
 		playerNew.y = yy;
+		playerNew.team = team;
 		
 		// create new on existing clients
 		buffer_seek(send_buffer, buffer_seek_start, 0);
@@ -25,6 +27,7 @@ switch (message_id) {
 		buffer_write(send_buffer, buffer_u16, xx);	
 		buffer_write(send_buffer, buffer_u16, yy);
 		buffer_write(send_buffer, buffer_string, username);
+		buffer_write(send_buffer, buffer_u8, team);
 				
 		with (o_serverPlayer) {
 			if (self.socket != socket) {
@@ -42,6 +45,7 @@ switch (message_id) {
 				buffer_write(other.send_buffer, buffer_u16, self.x);
 				buffer_write(other.send_buffer, buffer_u16, self.y);
 				buffer_write(other.send_buffer, buffer_string, self.name);
+				buffer_write(other.send_buffer, buffer_u8, self.team);
 
 				network_send_packet(socket, other.send_buffer, buffer_tell(other.send_buffer));
 				//show_message("create player" + string(self.socket) + " on " + string(socket));
@@ -49,6 +53,10 @@ switch (message_id) {
 		}
 		
 		
+	break;
+	
+	case MESSAGE_READY:
+		global.readyNum ++;
 	break;
 	
 	case MESSAGE_MOVE:

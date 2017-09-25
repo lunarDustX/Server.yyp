@@ -19,11 +19,4 @@ with (o_serverPlayer) {
 	network_send_packet(self.socket, other.send_buffer, buffer_tell(other.send_buffer));
 }
 
-/*
-var size = ds_list_size(socket_list);
-for (var i = 0; i < size; i++) {
-	var clientSocket = ds_list_find_value(socket_list, i);
-	if (socket != clientSocket) {
-		network_send_packet(clientSocket, send_buffer, buffer_tell(send_buffer));
-	}
-}
+global.readyNum--;
