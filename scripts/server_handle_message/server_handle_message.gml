@@ -122,31 +122,20 @@ switch (message_id) {
 		}
 	break;
 	
-	/*
-	case MESSAGE_LOOT:
-		var 
-		xx = buffer_read(buffer, buffer_u16),
-		yy = buffer_read(buffer, buffer_u16);
-		
-		buffer_seek(send_buffer, buffer_seek_start, 0);
-		buffer_write(send_buffer, buffer_u8, MESSAGE_LOOT);
-		buffer_write(send_buffer, buffer_u16, xx);
-		buffer_write(send_buffer, buffer_u16, yy);
-		
-		with (o_serverPlayer) {
-			//if (self.socket != socket) { ???????????
-				network_send_packet(self.socket, other.send_buffer, buffer_tell(other.send_buffer));
-			//}
-		}
-	break;
-	*/
-	
 	case MESSAGE_SCORE:
 		var 
 		team = buffer_read(buffer, buffer_u16),
 		point = buffer_read(buffer, buffer_u16),
 		player = playerMap[? string(socket)];
 		player.soul = 0;
+		with (o_base) {
+			if (self.team == team) {
+				self.hp += point * 10;
+				soul += point;
+				// for send
+				point = soul;
+			}
+		}
 			
 		buffer_seek(send_buffer, buffer_seek_start, 0);
 		buffer_write(send_buffer, buffer_u8, MESSAGE_SCORE);
@@ -160,4 +149,22 @@ switch (message_id) {
 			}
 		}
 	break;
+	
+	/*
+	case MESSAGE_BASEHP:
+		var 
+		team = buffer_read(buffer, buffer_u16), 
+		hp = buffer_read(buffer, buffer_u16);
+		
+		buffer_seek(send_buffer, buffer_seek_start, 0);
+		buffer_write(send_buffer, buffer_u8, MESSAGE_BASEHP);
+		buffer_write(send_buffer, buffer_u16, team);
+		buffer_write(send_buffer, buffer_u16, hp);
+		with (o_serverPlayer) {
+			if (self.socket != socket) {
+				network_send_packet(self.socket, other.send_buffer, buffer_tell(other.send_buffer));
+			}
+		}
+	break;
+	*/
 }
