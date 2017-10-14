@@ -3,7 +3,6 @@ switch (async_load[?"type"]) {
 	case network_type_connect:
 		var socket = async_load[? "socket"];
 		server_handle_connect(socket);
-		//ds_list_add(socket_list, socket);
 	break;
 	
 	case network_type_disconnect:

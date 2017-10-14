@@ -1,5 +1,5 @@
 /// @description 
 parent = noone;
 dir = 0;
-spd = 10;
+spd = BULLET_SPEED;
 dis = 0;

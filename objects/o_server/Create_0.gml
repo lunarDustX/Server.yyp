@@ -1,6 +1,6 @@
 /// @description 
 var type = network_socket_tcp,
-	port = 8000,
+	port = 9000,
 	maxClients = 20;
 
 server = network_create_server(type, port, maxClients);

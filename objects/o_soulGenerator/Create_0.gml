@@ -1,3 +1,3 @@
 /// @description 
 start_match = false;
-soulNumber = 1;
+soulNumber = global.minSoul;//1;  
