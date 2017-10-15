@@ -1,3 +1,4 @@
+
 // team
 #macro T_RED 0
 #macro T_YELLOW 1
@@ -31,4 +32,10 @@
 
 // collision 
 #macro MOVE_GAP 2
+
+enum heroes {
+	square = 0,
+	rectangle = 1,
+}
+
 

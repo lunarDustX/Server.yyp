@@ -10,6 +10,6 @@ if (server < 0) {
 
 //socket_list = ds_list_create();
 playerMap = ds_map_create();
-send_buffer = buffer_create(256, buffer_fixed, 1);
+send_buffer = buffer_create(512, buffer_fixed, 1);
 
 global.readyNum = 0;
