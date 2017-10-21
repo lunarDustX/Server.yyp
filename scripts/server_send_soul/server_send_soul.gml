@@ -1,6 +1,16 @@
-var 
-xx = irandom_range(room_width/2-100, room_width/2+100),
-yy = irandom_range(room_height/2-100, room_height/2+100);
+var xx, yy;
+var successPos = false;
+while (successPos == false) {
+	successPos = true;
+	xx = irandom_range(CENTER_X - SPAWN_RADIUS, CENTER_X + SPAWN_RADIUS);
+	yy = irandom_range(CENTER_Y - SPAWN_RADIUS, CENTER_Y + SPAWN_RADIUS);
+	with (o_hex_grey) {
+		if (point_distance(self.x, self.y, xx, yy) < 50) {
+			successPos = false;	
+		}
+	}
+}
+
 with (o_server) {
 	buffer_seek(send_buffer, buffer_seek_start, 0);
 	buffer_write(send_buffer, buffer_u8, MESSAGE_SPAWN);

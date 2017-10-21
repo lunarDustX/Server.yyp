@@ -3,7 +3,7 @@ socket = 0;
 
 
 name = "";
-hp = 5;
+hp = MAXHP;
 soul = 0;
 team = T_RED;
 heroType = heroes.square;

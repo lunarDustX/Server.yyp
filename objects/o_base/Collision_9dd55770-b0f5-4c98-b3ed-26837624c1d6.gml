@@ -1,19 +1,7 @@
 /// @description 
 
 var bullet = other;
-/*
-if (bullet.parent == o_player) {
-	if (team != o_player.team) {
-		if (hp > 0) {
-			hp--;
-			client_send_base_hp(team, hp);
-			if (hp mod 10 == 0) {
-			
-			}
-		}
-	}
-}
-*/
+
 if (bullet.parent.team != team) {
 	if (hp > 0) {
 		hp--;

@@ -6,8 +6,8 @@ team = argument0;
 randomize();
 var
 dir = irandom_range(0,359),
-rx = x + lengthdir_x(50, dir),
-ry = y + lengthdir_y(50, dir);
+rx = x + lengthdir_x(BASE_LOOT_RANGE, dir),
+ry = y + lengthdir_y(BASE_LOOT_RANGE, dir);
 
 with (o_server) {
 	buffer_seek(send_buffer, buffer_seek_start, 0);

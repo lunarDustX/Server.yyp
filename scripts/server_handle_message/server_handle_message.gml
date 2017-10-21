@@ -108,6 +108,29 @@ switch (message_id) {
 		}
 	break;
 	
+	case MESSAGE_BOMB:
+		var 
+		xx = buffer_read(buffer, buffer_u16),
+		yy = buffer_read(buffer, buffer_u16),
+		player = playerMap[? string(socket)],
+		bomb = instance_create_layer(xx, yy, "Instances", o_bomb);
+		bomb.parent = player;
+		
+		buffer_seek(send_buffer, buffer_seek_start, 0);
+		buffer_write(send_buffer, buffer_u8, MESSAGE_BOMB);
+		buffer_write(send_buffer, buffer_u16, socket);
+		buffer_write(send_buffer, buffer_u16, xx);
+		buffer_write(send_buffer, buffer_u16, yy);
+		
+		with (o_serverPlayer) {
+			if (socket != self.socket) {
+				network_send_packet(self.socket, other.send_buffer, buffer_tell(other.send_buffer));
+			}
+		}
+		
+	break;
+	
+	
 	case MESSAGE_PICK:
 		var
 		xx = buffer_read(buffer, buffer_u16),

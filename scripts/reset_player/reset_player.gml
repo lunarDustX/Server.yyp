@@ -1,4 +1,4 @@
 x = spawnx;
 y = spawny;
-hp = 5;
+hp = MAXHP;
 soul = 0;
