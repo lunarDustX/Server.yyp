@@ -26,14 +26,14 @@
 #macro SHOOT_RANGE 300
 #macro AMMOPERSHOOT 4
 #macro SHOOT_COOLING room_speed
-#macro BULLET_SPEED 16
+#macro BULLET_SPEED 14
 
 #macro BOMB_RADIUS 64
 
 
 // player attribute
 #macro MAXHP 6
-#macro PLAYER_SPD 6
+#macro PLAYER_SPD 5
 #macro REBORN_TIME 6
 
 // collision 

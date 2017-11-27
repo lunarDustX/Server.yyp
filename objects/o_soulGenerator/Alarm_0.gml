@@ -1,4 +1,4 @@
-/// @description 
+/// @description spawn souls
 for (i = 0; i< floor(soulNumber); i++) {
 	server_send_soul();
 }

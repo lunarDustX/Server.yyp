@@ -31,3 +31,10 @@ if (i_d == msg4) {
 		instance_create_layer(0,0,"Data", o_soulGenerator);
     }
 }
+
+if (i_d == msg5) {
+	if async_load[? "status"] {
+		global.matchTime = ds_map_find_value(async_load, "value");
+		//instance_create_layer(0,0,"Data", o_soulGenerator);
+    }
+}

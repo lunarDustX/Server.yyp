@@ -1,6 +1,7 @@
 /// @description 
 
 var bullet = other;
+var xx,yy;
 
 if (bullet.parent.team != team) {
 	if (hp > 0) {
@@ -8,7 +9,9 @@ if (bullet.parent.team != team) {
 		//server_send_basehp(team, hp);
 		if (hp mod 10 == 0 && soul > 0) {
 			soul--;
-			server_send_loot(team);
+			xx = (x + bullet.parent.x) div 2;
+			yy = (y + bullet.parent.y) div 2;
+			server_send_loot(team, xx, yy);
 		}
 	}
 }

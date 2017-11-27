@@ -2,6 +2,7 @@
 with (o_server) {
 	buffer_seek(send_buffer, buffer_seek_start, 0);
 	buffer_write(send_buffer, buffer_u8, MESSAGE_STARTGAME);
+	buffer_write(send_buffer, buffer_u16, global.matchTime);
 }
 
 with (o_serverPlayer) {
