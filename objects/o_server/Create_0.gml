@@ -13,3 +13,4 @@ playerMap = ds_map_create();
 send_buffer = buffer_create(512, buffer_fixed, 1);
 
 global.readyNum = 0;
+global.tempSoul = 0;

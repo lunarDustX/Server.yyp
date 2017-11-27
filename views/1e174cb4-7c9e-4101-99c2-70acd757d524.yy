@@ -8,7 +8,9 @@
         "fed607dc-16a6-49c8-8d81-e1e1bc5ba904",
         "b80a9c4f-9a98-4eec-b221-be71c0ef93ce",
         "309ef0da-9301-47d1-9c42-96629c6ac335",
-        "9f02589b-aee3-4b24-b9f2-66e404d0144a"
+        "9f02589b-aee3-4b24-b9f2-66e404d0144a",
+        "cebf720e-cf79-4e33-8a8e-96e157eb8473",
+        "1d9eeb43-42f1-4f73-87e5-8a57de2d587b"
     ],
     "filterType": "GMScript",
     "folderName": "server_send",

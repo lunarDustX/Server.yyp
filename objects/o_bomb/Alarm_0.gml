@@ -17,3 +17,15 @@ with (o_serverPlayer) {
 		}
 	}
 }
+
+with (o_base) {
+	if (self.team != other.parent.team) {
+		if (point_distance(x, y, other.x, other.y) < 105) {
+			if (self.soul > 0) {
+				self.soul--;
+				global.tempSoul++;
+				server_send_decrease(self.team);
+			}
+		}
+	}
+}

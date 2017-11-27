@@ -1,5 +1,5 @@
 /// @description 
-
+/*
 var bullet = other;
 var xx,yy;
 

@@ -14,4 +14,7 @@ if (hp <= 0) {
 	server_send_die(socket);
 	other.parent.hp = clamp(other.parent.hp+2, 0, MAXHP);
 	server_send_hurt(other.parent.socket, -2);
+	
+	//other.parent.bombs++;
+	server_send_kill(other.parent.socket);
 }
